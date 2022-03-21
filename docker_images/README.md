@@ -1,6 +1,6 @@
 # Airflow Docker Images
 
-## Creating airflow-data directory
+## Creating `airflow-data` directory
 
 ```sh
 mkdir -p ./airflow-data/dags ./airflow-data/logs ./airflow-data/plugins
@@ -18,8 +18,26 @@ docker-compose -f docker-compose.yaml up --build -d
 docker-compose -f docker-compose-with-celery-executor-workers.yaml up --build -d
 ```
 
-## Stop the running container
+## Docker Compose logs
+
+```sh
+docker-compose logs
+```
+
+## Stop the Running Containers
 
 ```sh
 docker-compose down --remove-orphans
+```
+
+## List the Containers
+
+```sh
+docker ps -a
+```
+
+## Go inside a Container
+
+```sh
+docker exec -it <container-id> /bin/bash
 ```
